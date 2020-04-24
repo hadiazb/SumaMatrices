@@ -4,12 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suma de Matrices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to bottom right, rgb(166, 166, 221), rgb(138, 130, 130));
+            height: 100vh;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+        }
+        .container__titulo {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
+<!-- <body onload="fnCreaTabla()"> -->
     <div class="container">
-        <h3 class="container">
-            Aplicativo para sumar matrices cuadradas del tamaño que prefieras.
+        <h3 class="container__titulo">
+            Calculadora para sumar dos matrices de la dimensión que gustes.
         </h3>
+        <div class="container__tablas">
+            <table id="miTablaUno" class="container__tablsa--tabla">
+                <tbody>
+    
+                </tbody>
+            </table>
+            <table id="miTablaDos" class="container__tablas--tabla">
+                <tbody>
+    
+                </tbody>
+            </table>
+            <table id="resultado" class="container__tablas--tabla">
+                <tbody>
+    
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </body>
 <script src="suma.js"></script>
