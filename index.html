@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="suma.js"></script>
     <title>Suma de Matrices</title>
     <style>
         * {
@@ -12,37 +13,101 @@
         }
         body {
             background: linear-gradient(to bottom right, rgb(166, 166, 221), rgb(138, 130, 130));
-            height: 100vh;
+            height: 200vh;
         }
         .container {
-            width: 800px;
-            height: 600px;
-            margin: 30px auto;
+            width: 1200px;
+            height: 800px;
+            margin: 10px auto;
+            padding-top: 50px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            border: 1px solid white;
+            border-radius: 20px;
+            border: 2px solid white;
+            box-shadow: 0 0 10px black;
         }
-        .container__titulo {
+        .container__input {
+            width: 500px;
+            height: 150px;
+            padding: 0 20px;
+        }
+        .container__tablas {
+            width: 100%;
+            height: calc(100% - 150px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container__input--titulo {
+            display: inline-block;
+            padding: 5px 0;
+            text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 1.2em;
+            font-size: 1em;
         }
+        .container__input label {
+            width: 70%;
+            height: 20px;
+            padding: 5px 130px 50px 0;
+            font-size: 1.1em;
+        }
+        .container__input input {
+            width: 20%;
+            height: 20px;
+            margin: 3px 0;
+            text-align: center;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .4);
+            color: white;
+            outline: none;
+            text-align: center;
+        }
+        .container__input button {
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, .1);
+            color: white;
+            outline: none;
+        }
+        .container__tablsa--tabla-1,
+        .container__tablas--tabla-2 {
+            border: 1px solid red;
+            margin: 20px;
+        }
+        .numero {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        } 
     </style>
 </head>
 <body>
 <!-- <body onload="fnCreaTabla()"> -->
     <div class="container">
-        <h3 class="container__titulo">
-            Calculadora para sumar dos matrices de la dimensión que gustes.
-        </h3>
+        <div class="container__input">
+            <h5 class="container__input--titulo">
+                Calculadora para sumar matrices de cualquier dimesión.
+            </h5>
+            <label for="renglones">Ingresa la cantidad de renglones</label>
+            <input id="renglones" type="text" name="renglones">
+            <br>
+            <label for="columnas">Ingresa la cantidad de columnas</label>
+            <input id="columnas" type="text" name="columnas">
+            <button id="boton">Enviar</button>
+        </div>
         <div class="container__tablas">
-            <table id="miTablaUno" class="container__tablsa--tabla">
+            <table id="miTablaUno" class="container__tablsa--tabla-1">
                 <tbody>
     
                 </tbody>
             </table>
-            <table id="miTablaDos" class="container__tablas--tabla">
+            <table id="miTablaDos" class="container__tablas--tabla-2">
                 <tbody>
     
                 </tbody>
@@ -56,5 +121,4 @@
 
     </div>
 </body>
-<script src="suma.js"></script>
 </html>
