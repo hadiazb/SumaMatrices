@@ -30,7 +30,7 @@
         }
         .container__input {
             width: 500px;
-            height: 150px;
+            height: 180px;
             padding: 0 20px;
         }
         .container__tablas {
@@ -74,16 +74,20 @@
             background-color: rgba(255, 255, 255, .1);
             color: white;
             outline: none;
+            cursor: pointer;
         }
         .container__tablsa--tabla-1,
-        .container__tablas--tabla-2 {
-            border: 1px solid red;
+        .container__tablas--tabla-2,
+        .container__tablas--tabla {
+            /* border: 1px solid red; */
             margin: 20px;
         }
         .numero {
             width: 30px;
             height: 30px;
             text-align: center;
+            border: 1px solid white;
+            background-color: transparent;
         } 
     </style>
 </head>
@@ -100,6 +104,7 @@
             <label for="columnas">Ingresa la cantidad de columnas</label>
             <input id="columnas" type="text" name="columnas">
             <button id="boton">Enviar</button>
+            <button id="resolver">Resolver</button>
         </div>
         <div class="container__tablas">
             <table id="miTablaUno" class="container__tablsa--tabla-1">
